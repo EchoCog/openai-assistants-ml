@@ -1,6 +1,3 @@
-import { ProjectiveGeometry } from './projective-geometry';
-import { DimensionalPatterns } from './dimensional-patterns';
-
 interface PSystemConfig {
   membraneCount: number;
   evolutionRules: string[];
@@ -151,47 +148,5 @@ export class PSystem {
       id: membrane.id,
       changes: Array.from(membrane.objects)
     }));
-  }
-
-  analyzeMembraneStructure(level: number): {
-    dimensional: string;
-    projective: string;
-  } {
-    return {
-      dimensional: DimensionalPatterns.analyzePattern(level),
-      projective: ProjectiveGeometry.analyzeProjectiveStructure(level)
-    };
-  }
-
-  mapMembraneToProjective(membrane: PSystemMembrane): IncidenceStructure {
-    const partition = this.calculateMembranePartition(membrane);
-    return ProjectiveGeometry.mapPartitionToProjective(partition);
-  }
-
-  private calculateMembranePartition(membrane: PSystemMembrane): string {
-    const parts: number[] = [];
-    let current = membrane;
-    
-    while (current) {
-      parts.push(this.calculateMembraneValue(current));
-      current = current.parent;
-    }
-    
-    return parts.sort((a, b) => b - a).join('+');
-  }
-
-  private calculateMembraneValue(membrane: PSystemMembrane): number {
-    // Calculate value based on membrane properties and contents
-    let value = 1; // Base value for existence
-    
-    // Add value for rules
-    value += membrane.rules.length;
-    
-    // Add value for nested membranes
-    if (membrane.children) {
-      value += membrane.children.length;
-    }
-    
-    return Math.min(value, 5); // Cap at 5 for hyper-dimensional elements
   }
 } 
