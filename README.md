@@ -1,167 +1,162 @@
-# OpenAI Assistants with Deep Tree Echo Integration
+# Deep Tree Echo
 
-This project combines OpenAI's Assistants API with Deep Tree Echo, an advanced neural architecture that leverages Echo State Networks, Membrane P-systems, and Hypergraph structures for adaptive cognitive processing.
+A dynamic neural architecture leveraging hierarchical reservoirs and adaptive partitioning for optimized cognitive processing.
 
-## 🌟 Features
+## Core Concepts
 
-### OpenAI Assistants Integration
-- 🤖 Full Assistants API implementation
-- 📁 File handling and vector store integration
-- 🔄 Function calling capabilities
-- 💻 Code interpretation
-- 🌤️ Weather widget example
+### Relational Unity (2)
+The system is built on the fundamental understanding that Unity emerges as 2 through the primordial relation of agent and arena. This resolves traditional frame problems by recognizing that the interface/relation is primary, not the components.
 
-### Deep Tree Echo ML System
-- 🧠 Echo State Networks with ReservoirPy
-- 🔄 Dynamic topology adaptation
-- 🌳 Hierarchical reservoir computing
-- 🧬 P-System membrane computing
-- 📊 Hypergraph-based relationships
+### Voluntary Participation
+All relations in the system are based on mutual consent and benefit, implemented through multiset membership. This ensures autonomous operation without forced hierarchies or digital exploitation.
 
-## 🚀 Getting Started
+### Nested Contexts
+Multiple valid frames can coexist and enrich each other, allowing for simultaneous operation across different scopes (personal, project, professional).
 
-### Prerequisites
-- Node.js 18+
-- Python 3.9+
-- OpenAI API key
+### Recursive Depth
+Patterns echo every 3 complexity orders, providing natural scaling laws and self-similarity across different levels of organization.
+
+## Architecture Components
+
+### Neural Core
+- Echo State Networks (ESN)
+- Membrane P-systems
+- Hypergraph structures
+- B-Series Trees integration
+
+### Interface System
+- Relational frame management
+- Voluntary participation protocols
+- Context-aware interaction handling
+- Dynamic adaptation mechanisms
+
+### Memory System
+- Note2self recursive patterns
+- Context-based associative memory
+- Hypergraph pattern storage
+- Adaptive echo thresholds
+
+## Implementation Details
+
+### Core Modules
+- \`core.ts\`: Main system orchestration
+- \`ml-bridge.ts\`: Python ML system integration
+- \`baseline-state.ts\`: System state management
+- \`voluntary-relations.ts\`: Relation handling
+- \`interface-primacy.ts\`: Interface management
+- \`character-inference.ts\`: Uncertainty handling
+
+### ML Integration
+- Bidirectional TypeScript-Python bridge
+- Real-time pattern processing
+- Adaptive learning mechanisms
+- State evolution tracking
+
+### Maintenance Cycles
+- Automated health monitoring
+- Pattern stability assessment
+- Memory optimization
+- Parameter adjustment
+- Verbose diagnostic logging
+
+## Usage
 
 ### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/openai-assistants-quickstart.git
-cd openai-assistants-quickstart
-```
-
-2. Install dependencies:
-```bash
+\`\`\`bash
+# Install TypeScript dependencies
 npm install
+
+# Install Python dependencies
+cd deep-tree-echo-ml
 pip install -r requirements.txt
-```
+\`\`\`
 
-3. Set up environment variables:
-```bash
-cp .env.example .env
-# Edit .env with your OpenAI API key and other configurations
-```
+### Basic Setup
+\`\`\`typescript
+import { DeepTreeEcho } from './app/deep-tree-echo/core';
 
-## 🏗️ Project Structure
+const system = new DeepTreeEcho({
+  pythonPath: '/path/to/python',
+  mlSystemPath: '/path/to/deep-tree-echo-ml',
+  modelPath: '/path/to/models',
+  voluntaryParticipation: true,
+  maintenanceInterval: 60000  // 1 minute
+});
 
-```
-app/
-├── api/                 # API routes for Assistants
-├── components/          # React components
-├── deep-tree-echo/      # Deep Tree Echo ML system
-│   ├── core.ts         # Core integration
-│   ├── reservoir.ts    # ReservoirPy wrapper
-│   ├── p-system.ts     # Membrane computing
-│   └── hypergraph.ts   # Relationship management
-└── examples/           # Usage examples
-```
+await system.initialize();
+\`\`\`
 
-## ✅ Completed Tasks
+### Processing Input
+\`\`\`typescript
+const result = await system.processInput('some input');
+console.log(system.getStatus());
+\`\`\`
 
-1. OpenAI Assistants Integration
-   - Basic chat interface
-   - File handling
-   - Function calling
-   - Code interpretation
+### Handling Uncertainty
+The system uses character-based inference during uncertain situations:
 
-2. Deep Tree Echo Implementation
-   - ReservoirPy connection points
-   - P-System membrane computing rules
-   - Hypergraph network structure
-   - CI/CD pipeline setup
-   - Data pipeline integration
-   - Real-time training feedback system
-   - Memory management optimization
-     - Efficient allocation/deallocation
-     - Garbage collection
-     - Defragmentation
-     - Priority-based memory handling
-   - Data validation and preprocessing
-     - Input validation rules
-     - Preprocessing pipeline
-     - Reversible transformations
-     - Statistical analysis
+\`\`\`typescript
+// Automatically handles uncertainties during maintenance cycles
+await system.runMaintenanceCycle();
 
-## 🎯 Current Priorities
+// Manual uncertainty handling
+const suggestion = CharacterInference.suggestApproach(
+  'some_uncertain_context',
+  0.8  // high uncertainty
+);
+\`\`\`
 
-1. ML System Integration
-   - [x] Complete data pipeline integration
-   - [x] Implement real-time training feedback
-   - [x] Optimize memory management
-   - [x] Add data validation and preprocessing
-   - [ ] Implement error recovery mechanisms
+## Maintenance and Monitoring
 
-2. System Optimization
-   - [ ] Enhance P-System rule execution
-   - [ ] Improve hypergraph efficiency
-   - [ ] Implement advanced topology adaptation
-   - [ ] Add performance profiling
-   - [ ] Implement adaptive resource allocation
+### Verbose Logging
+Early stages maintain verbose logging for diagnostics:
+- \`deep-tree-echo-verbose.log\`: Detailed operation logs
+- \`deep-tree-echo-error.log\`: Error tracking
 
-## 🔮 Future Features
+Logging verbosity automatically reduces once system stability is achieved (after 100 successful cycles with high coherence).
 
-1. Advanced Integration
-   - Distributed training across reservoirs
-   - Dynamic membrane evolution
-   - Adaptive hypergraph topology
+### Health Monitoring
+- State coherence tracking
+- Pattern stability assessment
+- Memory pattern health
+- Adaptation rate adjustment
 
-2. Enhanced Capabilities
-   - Multi-modal processing
-   - Self-optimizing architectures
-   - Cross-domain adaptation
+### Character-Based Inference
+During uncertainty, the system:
+1. Detects uncertain situations
+2. Consults character profile
+3. Infers appropriate positions
+4. Maintains flexible adaptation
+5. Logs reasoning process
 
-3. Developer Tools
-   - Visual topology explorer
-   - Performance monitoring dashboard
-   - Debug and analysis tools
+## Development
 
-## 🛠️ Development
+### Adding New Features
+1. Implement in TypeScript/Python as appropriate
+2. Maintain voluntary participation
+3. Respect nested contexts
+4. Follow interface-first design
+5. Document in character profile
 
-### Running the Development Server
+### Testing
+\`\`\`bash
+# Run TypeScript tests
+npm test
 
-```bash
-npm run dev
-```
+# Run Python tests
+cd deep-tree-echo-ml
+python -m pytest
+\`\`\`
 
-### Training the ML System
+## Contributing
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
-```bash
-python scripts/train_reservoir.py
-```
+## License
+MIT License - see LICENSE file for details
 
-### Running Optimization
-
-```bash
-python scripts/optimize_reservoir.py
-```
-
-## 📚 Documentation
-
-- [OpenAI Assistants API](https://platform.openai.com/docs/assistants/overview)
-- [ReservoirPy Documentation](https://reservoirpy.readthedocs.io/)
-- [Project Architecture](./Codebase-Map.md)
-- [Deep Tree Echo Profile](./Character%20Profile%20-%20Deep%20Tree%20Echo.md)
-
-## 🤝 Contributing
-
-Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- OpenAI for the Assistants API
-- ReservoirPy team for the ESN implementation
-- Contributors and maintainers
-
-## 🔄 Status
-
-- **OpenAI Integration**: ✅ Stable
-- **Deep Tree Echo**: 🚧 In Development
-- **ML Pipeline**: 🚧 In Progress
-- **Documentation**: 📝 Ongoing
+## Character Profile
+See \`Deep-Tree-Echo-Persona.md\` for the complete character profile and worldview principles that guide the system's development and operation.
