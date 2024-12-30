@@ -13,15 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@latest
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@latest
       with:
         python-version: '3.9'
 
     - name: Set up Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@latest
       with:
         node-version: '18'
 
@@ -48,7 +48,7 @@ jobs:
 
     - name: Upload model artifacts
       if: success() && github.event_name == 'push' && github.ref == 'refs/heads/main'
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@latest
       with:
         name: model-artifacts
         path: ./models
@@ -59,16 +59,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@latest
 
     - name: Download model artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@latest
       with:
         name: model-artifacts
         path: ./models
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@latest
       with:
         python-version: '3.9'
 
